@@ -9,7 +9,7 @@ The Quick Draw project leverages Google's Quick, Draw! dataset, which features m
 [QuickDraw Dataset]
 You can view and download the data from the following link: https://console.cloud.google.com/storage/browser/quickdraw_dataset/sketchrnn
 
-## Categories:
+## Categories
 The table below lists the 20 labels that I used to train the model.
 
 |           |           |           |           |
@@ -23,7 +23,7 @@ The table below lists the 20 labels that I used to train the model.
 ## Training
 You need to download npz files corresponding to 20 classes my model used and store them in folder **data**. If you want to train your model with different list of categories, you only need to change the constant **CLASSES** at **src/config.py** and download necessary npz files. Then you could simply run **python train.py**
 
-## Experiments:
+## Experiments
 For each class, I take the first 10000 images, and then split them to training and test sets with ratio 8:2. The training/test loss/accuracy curves for the experiment are shown below:
 
 <img src="demo/loss_accuracy_curves.png" width="700"> 
