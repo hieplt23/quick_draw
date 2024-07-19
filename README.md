@@ -26,13 +26,13 @@ You need to download npz files corresponding to 20 classes my model used and sto
 ## Experiments:
 For each class, I take the first 10000 images, and then split them to training and test sets with ratio 8:2. The training/test loss/accuracy curves for the experiment are shown below:
 
-<img src="demo/loss_accuracy_curves.png" width="800"> 
+<img src="demo/loss_accuracy_curves.png" width="700"> 
 
 ## Demo
 <img src="./demo/demo.gif" width=800>
 
 ## Requirements
 * **python 3.12**
-* **cv2**
-* **pytorch** 
+* **cv2 4.10**
+* **pytorch 2.3.1** 
 * **numpy**
