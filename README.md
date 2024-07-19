@@ -1,5 +1,5 @@
 <p align="center">
- <h1 align="center">Quic kDraw! 🖌️🖼</h1>
+ <h1 align="center">Quick Draw! 🖌️🖼</h1>
 </p>
 
 ## Introduction
