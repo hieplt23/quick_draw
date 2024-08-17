@@ -1,16 +1,28 @@
+<div align="center">
+  <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/artist-palette_1f3a8.png" width="100" height="100"/>
+</div>
+
+<h1 align="center">Quick Draw!🖌️</h1>
 <p align="center">
- <h1 align="center">Quick Draw! 🖌️🖼</h1>
+  <strong>A neural network-based drawing classification project using Google's Quick, Draw! dataset.</strong>
 </p>
 
+## Table of Contents
+- [Dataset](#dataset)
+- [Categories](#categories)
+- [Training](#training)
+- [Experiments](#experiments)
+- [Demo](#demo)
+- [Requirements](#requirements)
+
 ## Introduction
-The Quick Draw project leverages Google's Quick, Draw! dataset, which features millions of hand-drawn sketches across a wide range of categories. The project involves implementing a neural network model to classify these doodles into **20** randomly selected categories, each containing **10,000** images. The model was trained over **20** epochs, achieving a test loss of **0.37** and a test accuracy of **89.9%**. The end result is a real-time drawing application built with **OpenCV** that allows users to draw and instantly receive predictions on their sketches.
+The **Quick Draw** project uses Google's *Quick, Draw!* dataset, featuring millions of hand-drawn sketches. A neural network model classifies doodles into **20** categories, each with **10,000** images. After **20** epochs of training, the model achieved a test loss of **0.37** and an accuracy of **89.9%**. The project culminates in a real-time drawing app built with **OpenCV**, providing instant predictions for user sketches.
 
 ## Dataset 
-[QuickDraw Dataset]
-You can view and download the data from the following link: https://console.cloud.google.com/storage/browser/quickdraw_dataset/sketchrnn
+You can view and download the data from the following link: [QuickDraw Dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/sketchrnn)
 
 ## Categories
-The table below lists the 20 labels that I used to train the model.
+Below is the list of the 20 labels used to train the model:
 
 |           |           |           |           |
 |-----------|:-----------:|:-----------:|:-----------:|
@@ -21,15 +33,19 @@ The table below lists the 20 labels that I used to train the model.
 |  t-shirt  |   pants   | lightning |    tree   |
 
 ## Training
-You need to download npz files corresponding to 20 classes my model used and store them in folder **data**. If you want to train your model with different list of categories, you only need to change the constant **CLASSES** at **src/config.py** and download necessary npz files. Then you could simply run **python train.py**
+To train the model, you need to download the `.npz` files corresponding to the 20 classes used and store them in the **data** folder. If you want to train your model with a different list of categories, you only need to change the constant **CLASSES** in **src/config.py** and download the necessary `.npz` files. Then, simply run: `python train.py`
 
 ## Experiments
-For each class, I take the first **10000 images**, and then split them to training and test sets with ratio **8:2**. The training/test loss/accuracy curves for the experiment are shown below:
+For each class, I selected the first 10,000 images and split them into training and test sets with a ratio of 8:2. The training and test loss/accuracy curves for the experiment are shown below:
 
-<img src="demo/loss_accuracy_curves.png" width="700"> 
+<p align="center">
+  <img src="demo/loss_accuracy_curves.png" alt="Loss and Accuracy Curves" width="700">
+</p>
 
 ## Demo
-<img src="./demo/demo.gif" width=800>
+<p align="center">
+ <img src="./demo/demo.gif" width=800>
+</p>
 
 ## Requirements
 * **python 3.12**
