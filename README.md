@@ -8,6 +8,7 @@
 </p>
 
 ## Table of Contents
+- [Introduction](#introduction)
 - [Dataset](#dataset)
 - [Categories](#categories)
 - [Training](#training)
