@@ -34,7 +34,7 @@ Below is the list of the 20 labels used to train the model:
 |  t-shirt  |   pants   | lightning |    tree   |
 
 ## Training
-To train the model, you need to download the `.npz` files corresponding to the 20 classes used and store them in the **data** folder. If you want to train your model with a different list of categories, you only need to change the constant **CLASSES** in **src/config.py** and download the necessary `.npz` files. Then, simply run: `python train.py`
+To train the model, you need to download the `.npz` files corresponding to the 20 classes used and store them in the **data** folder. If you want to train your model with a different list of categories, you only need to change the constant **CLASSES** in `./src/config.py` and download the necessary `.npz` files. Then, simply run: `python train.py`
 
 ## Experiments
 For each class, I selected the first 10,000 images and split them into training and test sets with a ratio of 8:2. The training and test loss/accuracy curves for the experiment are shown below:
@@ -44,6 +44,7 @@ For each class, I selected the first 10,000 images and split them into training 
 </p>
 
 ## Demo
+By run script: `painting_app.py`
 <p align="center">
  <img src="./demo/demo.gif" width=800>
 </p>
