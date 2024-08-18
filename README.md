@@ -74,6 +74,7 @@ python painting_app.py
 ```
 <p align="center">
  <img src="./demo/demo1.gif" width=900>
+  <em>Demo</em>
 </p>
 
 ## 📋 Requirements
