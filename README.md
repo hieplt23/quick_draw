@@ -46,7 +46,7 @@ For each class, I selected the first 10,000 images and split them into training 
 ## Demo
 By run script: `painting_app.py`
 <p align="center">
- <img src="./demo/demo.gif" width=800>
+ <img src="./demo/demo1.gif" width=800>
 </p>
 
 ## Requirements
