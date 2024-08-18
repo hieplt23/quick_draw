@@ -90,7 +90,7 @@ python painting_app.py
 1. Clone the repository:
 ```bash
 git clone https://github.com/hieplt23/quick_draw.git
-cd quick-draw
+cd quick_draw
 ```
 2. Create a virtual environment (optional but recommended):
 ```bash
