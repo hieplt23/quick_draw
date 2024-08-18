@@ -39,7 +39,7 @@ After **20** epochs of training, the model achieved a test loss of **0.37** and 
 
 You can view and download the data from the following link: [QuickDraw Dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/sketchrnn)
 
-## 🏷️ Categories
+## 🏷 Categories
 
 Below is the list of 20 labels used to train the model:
 
@@ -51,7 +51,7 @@ Below is the list of 20 labels used to train the model:
 | 🍦 ice cream | 🍃 leaf | ✂️ scissors | ⭐ star |
 | 👕 t-shirt | 👖 pants | ⚡ lightning | 🌳 tree |
 
-## 🏋️ Training
+## 🏋 Training
 
 To train the model, you need to download the `.npz` files corresponding to the 20 classes used and store them in the **data** folder. If you want to train your model with a different list of categories, you only need to change the constant **CLASSES** in `./src/config.py` and download the necessary `.npz` files. Then, simply run:
 
@@ -102,7 +102,7 @@ source venv/bin/activate  # On Windows, use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 🖥️ Usage
+## 🖥 Usage
 
 1. Train the model: ``python train.py``
 2. Run the demo application: ``python painting_app.py``
