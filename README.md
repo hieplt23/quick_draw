@@ -94,8 +94,8 @@ cd quick_draw
 ```
 2. Create a virtual environment (optional but recommended):
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate  # On Windows, use: .venv\Scripts\activate
 ```
 3. Install the dependencies:
 ```bash
