@@ -74,7 +74,7 @@ To run the demo application, use the command:
 python painting_app.py
 ```
 <p align="center">
- <img src="./demo/demo1.gif" width=900></br>
+ <img src="./demo/demo.gif" width=900></br>
   <em>Demo</em>
 </p>
 
