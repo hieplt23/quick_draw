@@ -55,7 +55,7 @@ Below is the list of 20 labels used to train the model:
 
 To train the model, you need to download the `.npz` files corresponding to the 20 classes used and store them in the **data** folder. If you want to train your model with a different list of categories, you only need to change the constant **CLASSES** in `./src/config.py` and download the necessary `.npz` files. Then, simply run:
 
-```bash
+```python
 python train.py
 ```
 
@@ -70,7 +70,7 @@ For each class, I selected the first 10,000 images and split them into training 
 ## 🎮 Demo
 
 To run the demo application, use the command:
-```bash
+```python
 python painting_app.py
 ```
 <p align="center">
