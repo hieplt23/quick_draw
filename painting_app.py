@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from src.config import *
 from src.config import CLASSES
 import torch
 import os
