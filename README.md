@@ -81,7 +81,7 @@ python painting_app.py
 
 - Python 3.12
 - OpenCV 4.10
-- PyTorch 2.3.1
+- PyTorch 2.3
 - NumPy
 
 ## 💻 Installation
