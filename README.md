@@ -18,8 +18,7 @@
   <a href="#-requirements">Requirements</a> •
   <a href="#-installation">Installation</a> •
   <a href="#-usage">Usage</a> •
-  <a href="#-contributing">Contributing</a> •
-  <a href="#-license">License</a>
+  <a href="#-contributing">Contributing</a>
 </p>
 
 <p align="center">
