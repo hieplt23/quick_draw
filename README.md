@@ -62,7 +62,7 @@ python train.py
 
 For each class, I selected the first 10,000 images and split them into training and test sets with a ratio of 8:2. The training and test loss/accuracy curves for the experiment are shown below:
 <p align="center">
-  <img src="demo/loss_accuracy_curves.png" alt="Loss and Accuracy Curves" width="900"></br>
+  <img src="demo/loss_accuracy_curves.png" alt="Loss and Accuracy Curves" width="800"></br>
   <em>Experiments</em>
 </p>
 
