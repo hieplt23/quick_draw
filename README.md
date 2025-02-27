@@ -28,6 +28,17 @@
 <!--   <img src="https://img.shields.io/badge/license-MIT-yellow.svg" alt="License"> -->
 </p>
 
+## 🎮 Demo
+
+To run the demo application, use the command:
+```python
+python painting_app.py
+```
+<p align="center">
+ <img src="./demo/demo.gif" width=900></br>
+  <em>Demo</em>
+</p>
+
 ## 🚀 Introduction
 
 **Quick Draw** is an exciting project that utilizes Google's *Quick, Draw!* dataset, featuring millions of hand-drawn sketches. This project builds a neural network model to classify doodles into **20** different categories, each with **10,000** images.
@@ -64,17 +75,6 @@ For each class, I selected the first 10,000 images and split them into training 
 <p align="center">
   <img src="demo/loss_accuracy_curves.png" alt="Loss and Accuracy Curves" width="800"></br>
   <em>Experiments</em>
-</p>
-
-## 🎮 Demo
-
-To run the demo application, use the command:
-```python
-python painting_app.py
-```
-<p align="center">
- <img src="./demo/demo.gif" width=900></br>
-  <em>Demo</em>
 </p>
 
 ## 📋 Requirements
