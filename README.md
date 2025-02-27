@@ -53,7 +53,7 @@ You can view and download the data from the following link: [QuickDraw Dataset](
 
 Below is the list of 20 labels used to train the model:
 
-| Column 1 | Column 2 | Column 3 | Column 4 |
+| Categories | Categories | Categories | Categories |
 |:--------:|:--------:|:--------:|:--------:|
 | 🍎 apple | 📚 book | 🎀 bowtie | 🕯️ candle |
 | ☁️ cloud | ☕ cup | 🚪 door | ✉️ envelope |
