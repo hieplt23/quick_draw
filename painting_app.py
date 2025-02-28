@@ -28,14 +28,14 @@ def draw_label_image(background, overlay, position):
     roi = background[y:y + h, x:x + w]
 
     # directly overlay the image assuming no transparency needed
-    overlay_resized = cv2.resize(overlay, (w, h))  # resize overlay to match ROI size
+    overlay_resized = (cv2.resize(overlay, (w, h)))+255.  # resize overlay to match ROI size
     background[y:y + h, x:x + w] = overlay_resized
 
     return background
 
 def main():
     # load model
-    model = load_model("trained_models/whole_model_quickdraw")
+    model = load_model("./trained_models/whole_model_quickdraw")
 
     # set model to evaluation mode
     model.eval()
@@ -75,8 +75,8 @@ def main():
         # display the inverted canvas
         key = display_image(image)
 
-        # exit loop if 'q' is pressed
-        if key == ord("q"):
+        # exit loop if 'q' is pressed or close window
+        if key == ord("q") or cv2.getWindowProperty("Painting App", cv2.WND_PROP_VISIBLE) < 1:
             break
 
         # process the drawing when spacebar is pressed
@@ -120,7 +120,7 @@ def main():
             predicted_class = CLASSES[torch.argmax(logits[0])]
 
             # draw the predicted class on a copy of the canvas
-            canvas_with_text = image.copy()
+            canvas_with_text = 255 - image.copy()
             draw_text(canvas_with_text, "It look like: ", (10, 50), font_scale=1,
                       color=(255, 35, 255), thickness=2)
             draw_text(canvas_with_text, "Press Space to continue", (10, 90), font_scale=1,
@@ -128,16 +128,27 @@ def main():
 
             # load label image
             label_image = cv2.imread(f"images/{predicted_class}.png")
-            print(label_image.shape)
+
+            # convert black pixel to white pixel
+            height, width = label_image.shape[:2]
+            for h in range(height):
+                for w in range(width):
+                    if np.array_equal(label_image[h, w], [0, 0, 0]):
+                        label_image[h, w] = [255, 255, 255]
+            # cv2.imshow('test', label_image)
+            # cv2.waitKey(0)
+
             label_image = cv2.resize(label_image, (50, 50))
             draw_label_image(canvas_with_text, label_image, (205, 15))
 
             # display the canvas with text
-            cv2.imshow("Painting App", 255 - canvas_with_text)
+            cv2.imshow("Painting App", canvas_with_text)
             cv2.waitKey(0)
 
             # reset the canvas after each prediction
             image = np.zeros((520, 680, 3), dtype=np.uint8)
+
+    cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     main()
