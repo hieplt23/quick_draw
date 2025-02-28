@@ -2,7 +2,7 @@ import torch.nn as nn
 from math import pow
 import torch
 
-class QuickDrawModel(nn.Module):
+class QuickDraw(nn.Module):
     def __init__(self, input_size=28, num_classes=20):
         super().__init__()
         self.num_classes = num_classes
@@ -13,7 +13,7 @@ class QuickDrawModel(nn.Module):
         self.fc3 = nn.Sequential(nn.Linear(128, num_classes))
 
     def forward(self, x):
-        x = self.conv1(input)
+        x = self.conv1(x)
         x = self.conv2(x)
         x = torch.flatten(x, 1)
         x = self.fc1(x)
