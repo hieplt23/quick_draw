@@ -20,6 +20,6 @@ COPY trained_models /workspace/trained_models
 COPY images /workspace/images
 COPY src /workspace/src
 
-WORKDIR /workspace
-
-CMD ["python", "painting_app.py"]
+#WORKDIR /workspace
+#
+#CMD ["python", "train.py"]
