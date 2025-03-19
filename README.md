@@ -15,6 +15,7 @@
   <a href="#-categories">Categories</a> •
   <a href="#-training">Training</a> •
   <a href="#-experiments">Experiments</a> •
+  <a href="#-docker-support">Docker Support</a> •
   <a href="#-requirements">Requirements</a> •
   <a href="#-installation">Installation</a> •
   <a href="#-usage">Usage</a> •
@@ -30,8 +31,8 @@
 
 ## 🎮 Demo
 
-To run the demo application, use the command:
-```python
+Launch the real-time drawing app with a single command:
+```bash
 python painting_app.py
 ```
 <p align="center">
@@ -47,11 +48,11 @@ After **20** epochs of training, the model achieved a test loss of **0.37** and 
 
 ## 📊 Dataset
 
-You can view and download the data from the following link: [QuickDraw Dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/sketchrnn)
+Dive into the data that fuels this project! Explore and download the Quick, Draw! dataset here: [QuickDraw Dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/sketchrnn)
 
 ## 🏷 Categories
 
-Below is the list of 20 labels used to train the model:
+Our model recognizes 20 fun and diverse categories. Here’s the full lineup::
 
 | Categories | Categories | Categories | Categories |
 |:--------:|:--------:|:--------:|:--------:|
@@ -63,9 +64,8 @@ Below is the list of 20 labels used to train the model:
 
 ## 🏋 Training
 
-To train the model, you need to download the `.npz` files corresponding to the 20 classes used and store them in the **data** folder. If you want to train your model with a different list of categories, you only need to change the constant **CLASSES** in `./src/config.py` and download the necessary `.npz` files. Then, simply run:
-
-```python
+Ready to train your own doodle classifier? Download the `.npz` files for the 20 categories and place them in the `data` folder. Want to mix it up with your own categories? Simply tweak the `CLASSES` constant in `./src/config.py`, grab the relevant `.npz` files, and fire up the training:
+```bash
 python train.py
 ```
 
@@ -76,6 +76,20 @@ For each class, I selected the first 10,000 images and split them into training 
   <img src="demo/loss_accuracy_curves.png" alt="Loss and Accuracy Curves" width="800"></br>
   <em>Experiments</em>
 </p>
+
+## 🐳 Docker Support
+
+Take your project to the next level with Docker! We’ve included a custom **Dockerfile** to streamline setup and ensure consistency across environments—perfect for development, testing or deployment.
+
+### Quick Start with Docker
+1. **Build the Image**:
+   ```bash
+   docker build -t quick-draw -f Dockerfile .
+   ```
+2. **Run the Container:**
+   ```bash
+   docker run -it quick-draw
+   ```
 
 ## 📋 Requirements
 
@@ -91,10 +105,10 @@ For each class, I selected the first 10,000 images and split them into training 
 git clone https://github.com/hieplt23/quick_draw.git
 cd quick_draw
 ```
-2. Create a virtual environment (optional but recommended):
+2. Create a virtual environment (optional):
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # On Windows, use: .venv\Scripts\activate
+.venv\Scripts\activate # on windows
 ```
 3. Install the dependencies:
 ```bash
@@ -108,4 +122,4 @@ pip install -r requirements.txt
 
 ## 🤝 Contributing
 
-Contributions are always welcome! Please read the contribution guidelines for more information on how you can help improve this project.
+Contributions are always welcome!
