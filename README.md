@@ -9,12 +9,12 @@
 </p>
 
 <p align="center">
+  <a href="#-demo">Demo</a> •
   <a href="#-introduction">Introduction</a> •
   <a href="#-dataset">Dataset</a> •
   <a href="#-categories">Categories</a> •
   <a href="#-training">Training</a> •
   <a href="#-experiments">Experiments</a> •
-  <a href="#-demo">Demo</a> •
   <a href="#-requirements">Requirements</a> •
   <a href="#-installation">Installation</a> •
   <a href="#-usage">Usage</a> •
