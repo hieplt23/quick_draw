@@ -88,7 +88,7 @@ Take your project to the next level with Docker! We’ve included a custom **Doc
    ```
 2. **Run the Container:**
    ```bash
-   docker run -it quick-draw
+   docker run -it quick-draw bash
    ```
 
 ## 📋 Requirements
